@@ -45,6 +45,7 @@ nisplus.o:       $(HDRS) nisplus.c
 oracle.o:        $(HDRS) oracle.c
 passwd.o:        $(HDRS) passwd.c
 pgsql.o:         $(HDRS) pgsql.c
+pwmd.so:         $(HDRS) pwmd.c
 readsock.o:      $(HDRS) readsock.c
 redis.o:         $(HDRS) redis.c
 spf.o:           $(HDRS) spf.c
@@ -67,6 +68,7 @@ nisplus.so:       $(HDRS) nisplus.c
 oracle.so:        $(HDRS) oracle.c
 passwd.so:        $(HDRS) passwd.c
 pgsql.so:         $(HDRS) pgsql.c
+pwmd.so:          $(HDRS) pwmd.c
 redis.so:         $(HDRS) redis.c
 spf.so:           $(HDRS) spf.c
 sqlite.so:        $(HDRS) sqlite.c

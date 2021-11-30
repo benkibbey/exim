@@ -77,6 +77,12 @@ BOOL    eldap_start_tls        = FALSE;
 uschar *mysql_servers          = NULL;
 #endif
 
+#ifdef LOOKUP_PWMD
+uschar   *pwmd_file            = NULL;
+uschar   *pwmd_socket          = NULL;
+uschar   *pwmd_socket_args     = NULL;
+#endif
+
 #ifdef LOOKUP_ORACLE
 uschar *oracle_servers         = NULL;
 #endif

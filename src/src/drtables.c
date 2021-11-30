@@ -599,6 +599,9 @@ extern lookup_module_info passwd_lookup_module_info;
 #if defined(LOOKUP_PGSQL) && LOOKUP_PGSQL!=2
 extern lookup_module_info pgsql_lookup_module_info;
 #endif
+#if defined(LOOKUP_PWMD) && LOOKUP_PWMD!=2
+extern lookup_module_info pwmd_lookup_module_info;
+#endif
 #if defined(LOOKUP_REDIS) && LOOKUP_REDIS!=2
 extern lookup_module_info redis_lookup_module_info;
 #endif
@@ -692,6 +695,10 @@ addlookupmodule(NULL, &passwd_lookup_module_info);
 
 #if defined(LOOKUP_PGSQL) && LOOKUP_PGSQL!=2
 addlookupmodule(NULL, &pgsql_lookup_module_info);
+#endif
+
+#if defined(LOOKUP_PWMD) && LOOKUP_PWMD!=2
+  addlookupmodule(NULL, &pwmd_lookup_module_info);
 #endif
 
 #if defined(LOOKUP_REDIS) && LOOKUP_REDIS!=2

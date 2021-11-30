@@ -56,6 +56,12 @@ extern int     eldap_version;          /* LDAP version */
 extern uschar *mysql_servers;          /* List of servers and connect info */
 #endif
 
+#ifdef LOOKUP_PWMD
+extern uschar   *pwmd_file;            /* The data file to use on the server */
+extern uschar   *pwmd_socket;          /* The socket (URL) to connect to */
+extern uschar   *pwmd_socket_args;     /* Socket parameters (TLS cert, etc) */
+#endif
+
 #ifdef LOOKUP_ORACLE
 extern uschar *oracle_servers;         /* List of servers and connect info */
 #endif

@@ -7243,6 +7243,21 @@ password value. For example:
 PostgreSQL database. See section &<<SECTsql>>&.
 
 .next
+.cindex "Pwmd lookup type"
+.cindex "lookup" "Pwmd"
+&(pwmd)&: The format of the query is an element path with the value returned
+being the content of the final element in the path.  The elements in the path
+are TAB delimited by using the \t escape sequence:
+.code
+PASSWDLINE==${lookup pwmd{$host\tusername}}:${lookup pwmd{$host\tpassword}}
+.endd
+The pwmd socket to connect to is specified in the global &%pwmd_socket%&
+parameter with the default being &`~/.pwmd/socket`&. Any comma separated
+libpwmd(3) socket options passed to pwmd_connect() should be specified in the
+&%pwmd_socket_args%& parameter.  The only required parameter is &%pwmd_file%&
+and specifies the data file to open.
+
+.next
 .cindex "Redis lookup type"
 .cindex lookup Redis
 &(redis)&: The format of the query is either a simple get or simple set,

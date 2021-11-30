@@ -1173,6 +1173,9 @@ g = string_cat(g, US"Lookups (built-in):");
 #if defined(LOOKUP_PGSQL) && LOOKUP_PGSQL!=2
   g = string_cat(g, US" pgsql");
 #endif
+#if defined(LOOKUP_PWMD) && LOOKUP_PWMD!=2
+  g = string_cat(g, US" pwmd");
+#endif
 #if defined(LOOKUP_REDIS) && LOOKUP_REDIS!=2
   g = string_cat(g, US" redis");
 #endif

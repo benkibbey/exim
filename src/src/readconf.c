@@ -269,6 +269,11 @@ static optionlist optionlist_config[] = {
 #ifdef SUPPORT_PROXY
   { "proxy_protocol_timeout",   opt_time,        {&proxy_protocol_timeout} },
 #endif
+#ifdef LOOKUP_PWMD
+  { "pwmd_file",                opt_stringptr,   {&pwmd_file} },
+  { "pwmd_socket",              opt_stringptr,   {&pwmd_socket} },
+  { "pwmd_socket_args",         opt_stringptr,   {&pwmd_socket_args} },
+#endif
   { "qualify_domain",           opt_stringptr,   {&qualify_domain_sender} },
   { "qualify_recipient",        opt_stringptr,   {&qualify_domain_recipient} },
   { "queue_domains",            opt_stringptr,   {&queue_domains} },

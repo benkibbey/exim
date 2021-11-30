@@ -8772,6 +8772,9 @@ for (int i = 1; i < argc; i++)
 #ifdef LOOKUP_PGSQL
       pgsql_servers = argv[i];
 #endif
+#ifdef LOOKUP_PWMD
+      pwmd_file = argv[i];
+#endif
 #ifdef LOOKUP_REDIS
       redis_servers = argv[i];
 #endif
